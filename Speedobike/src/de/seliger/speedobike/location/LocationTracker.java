@@ -67,16 +67,16 @@ public class LocationTracker extends Service implements LocationListener {
 
     @Override
     public void onLocationChanged(Location location) {
-        getPositionFromLocation(location);
-        mainActivity.setLocationText();
+        //        getPositionFromLocation(location);
+        mainActivity.setInfoFromLocation(location);
     }
 
-    private void getPositionFromLocation(Location location) {
-        if (location != null) {
-            latitude = location.getLatitude();
-            longitude = location.getLongitude();
-        }
-    }
+    //    private void getPositionFromLocation(Location location) {
+    //        if (location != null) {
+    //            latitude = location.getLatitude();
+    //            longitude = location.getLongitude();
+    //        }
+    //    }
 
     private void requestLocationUpdates() {
         // getting GPS status
